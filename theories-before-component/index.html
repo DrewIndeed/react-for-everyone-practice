@@ -6,11 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data and JSX elements</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 
 <body>
     <!-- get way for all React elements -->
-    <div class="root"></div>
+    <div id="root"></div>
 
     <!-- include there to be able to write JSX elements -->
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -19,7 +27,14 @@
 
     <!-- write code in here -->
     <script type="text/babel">
-
+        // 1. Connect to root document before injecting into it
+        const rootElement = document.getElementById("root");
+        // 2. Create a parent elements before adding all children into it
+        const app = (
+            <h1>Hello World! Show first JSX successfully!</h1>
+        );
+        // 3. Using render() form ReactDOM to render the 2 into 1
+        ReactDOM.render(app, rootElement);
     </script>
 </body>
 
