@@ -29,9 +29,42 @@
     <script type="text/babel">
         // 1. Connect to root document before injecting into it
         const rootElement = document.getElementById("root");
+
+        // creating children
+        const header = (
+            <header className="header" style={{ border: "2px solid red" }}>
+                <h1>Getting Started React</h1>
+                <h2>JavaScript Library</h2>
+                <p>Learner: Andrew Le Nguyen</p>
+                <p>Date: Thu Oct 28th 2021</p>
+            </header>
+        );
+
+        const main = (
+            <main className="main" style={{ border: "2px solid cyan" }}>
+                <p>Prequisites to get started with <strong><em>ReactJS</em></strong></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <p>Random basic Math using numbers: 20 + 2 = {20 + 2}</p>
+            </main>
+        );
+
+        const footer = (
+            <footer className="footer" style={{ border: "2px solid darkgreen" }}>
+                <p>Copyright &copy; 2021</p>
+            </footer>
+        );
+
         // 2. Create a parent elements before adding all children into it
         const app = (
-            <h1>Hello World! Show first JSX successfully!</h1>
+            <div className="app">
+                {header}
+                {main}
+                {footer}
+            </div>
         );
         // 3. Using render() form ReactDOM to render the 2 into 1
         ReactDOM.render(app, rootElement);
