@@ -109,7 +109,7 @@
         }
         const learnerContent = <p>Learner: {learner.firstName} {learner.lastName}</p>
         const dateContent = <p>Date: {Object.values(date).join(" ")}</p>
-        const header = (
+        const Header = () => (
             <header className="wrapper header">
                 {bigTitleContent}
                 {subTitleContent}
@@ -122,7 +122,7 @@
         const itemsWithLiTags = prequisitesListItems.map(item => <li key={item}>{item}</li>);
         const operand1 = 20;
         const operand2 = 2;
-        const main = (
+        const Main = () => (
             <main className="wrapper main">
                 <hr/>
                 <h2>1. Prequisites to get started with <strong><em>ReactJS</em></strong></h2>
@@ -135,22 +135,22 @@
         );
 
         const footerContent = <p>Copyright &copy; 2021</p>;
-        const footer = (
+        const Footer = () => (
             <footer className="footer">
                 {footerContent}
             </footer>
         );
 
         // 2. Create a parent elements before adding all children into it
-        const app = (
+        const App = () => (
             <div className="app">
-                {header}
-                {main}
-                {footer}
+                <Header />
+                <Main />
+                <Footer />
             </div>
         );
         // 3. Using render() form ReactDOM to render the 2 into 1
-        ReactDOM.render(app, rootElement);
+        ReactDOM.render(<App />, rootElement);
     </script>
 </body>
 
