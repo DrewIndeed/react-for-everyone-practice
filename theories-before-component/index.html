@@ -95,32 +95,49 @@
         const rootElement = document.getElementById("root");
 
         // creating children
+        const bigTitleContent = <h1>Getting Started React</h1>;
+        const subTitleContent = <h2>JavaScript Library</h2>;
+        const learner = {
+            firstName: 'Andrew',
+            lastName: 'Le Nguyen'
+        }
+        const date = {
+            weekday: 'Thu',
+            monthdat: '28th',
+            month: 'Oct',
+            year: '2021'
+        }
+        const learnerContent = <p>Learner: {learner.firstName} {learner.lastName}</p>
+        const dateContent = <p>Date: {Object.values(date).join(" ")}</p>
         const header = (
             <header className="wrapper header">
-                <h1>Getting Started React</h1>
-                <h2>JavaScript Library</h2>
-                <p>Learner: Andrew Le Nguyen</p>
-                <p>Date: Thu Oct 28th 2021</p>
+                {bigTitleContent}
+                {subTitleContent}
+                {learnerContent}
+                {dateContent}
             </header>
         );
 
+        const prequisitesListItems = ['HTML', 'CSS', 'JavaScript'];
+        const itemsWithLiTags = prequisitesListItems.map(item => <li key={item}>{item}</li>);
+        const operand1 = 20;
+        const operand2 = 2;
         const main = (
             <main className="wrapper main">
                 <hr/>
                 <h2>1. Prequisites to get started with <strong><em>ReactJS</em></strong></h2>
                 <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
+                    {itemsWithLiTags}
                 </ul>
                 <hr/>
-                <h2>2. Random basic Math using numbers: 20 + 2 = {20 + 2}</h2>
+                <h2>2. Random basic Math using numbers: {operand1} + {operand2} = {operand1 + operand2}</h2>
             </main>
         );
 
+        const footerContent = <p>Copyright &copy; 2021</p>;
         const footer = (
             <footer className="footer">
-                <p>Copyright &copy; 2021</p>
+                {footerContent}
             </footer>
         );
 
