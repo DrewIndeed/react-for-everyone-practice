@@ -24,10 +24,12 @@
             font-family: 'Zen Kaku Gothic Antique', sans-serif;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             letter-spacing: 5px;
         }
-        
+
         ul {
             list-style: none;
             text-align: center;
@@ -95,60 +97,79 @@
         const rootElement = document.getElementById("root");
 
         // creating children
-        const bigTitleContent = <h1>Getting Started React</h1>;
-        const subTitleContent = <h2>JavaScript Library</h2>;
-        const learner = {
-            firstName: 'Andrew',
-            lastName: 'Le Nguyen'
-        }
-        const date = {
-            weekday: 'Thu',
-            monthdat: '28th',
-            month: 'Oct',
-            year: '2021'
-        }
-        const learnerContent = <p>Learner: {learner.firstName} {learner.lastName}</p>
-        const dateContent = <p>Date: {Object.values(date).join(" ")}</p>
-        const Header = () => (
+        const Header = (props) => (
             <header className="wrapper header">
-                {bigTitleContent}
-                {subTitleContent}
-                {learnerContent}
-                {dateContent}
+                {props.bigTitle}
+                {props.subTitle}
+                {props.learner}
+                {props.date}
             </header>
         );
 
-        const prequisitesListItems = ['HTML', 'CSS', 'JavaScript'];
-        const itemsWithLiTags = prequisitesListItems.map(item => <li key={item}>{item}</li>);
-        const operand1 = 20;
-        const operand2 = 2;
-        const Main = () => (
+        const Main = (props) => (
             <main className="wrapper main">
-                <hr/>
+                <hr />
                 <h2>1. Prequisites to get started with <strong><em>ReactJS</em></strong></h2>
                 <ul>
-                    {itemsWithLiTags}
+                    {props.techList}
                 </ul>
-                <hr/>
-                <h2>2. Random basic Math using numbers: {operand1} + {operand2} = {operand1 + operand2}</h2>
+                <hr />
+                <h2>2. Random basic Math using numbers: {props.op1} + {props.op2} = {props.op1 + props.op2}</h2>
             </main>
         );
 
-        const footerContent = <p>Copyright &copy; 2021</p>;
-        const Footer = () => (
+        const Footer = (props) => (
             <footer className="footer">
-                {footerContent}
+                {props.copy}
             </footer>
         );
 
         // 2. Create a parent elements before adding all children into it
-        const App = () => (
-            <div className="app">
-                <Header />
-                <Main />
-                <Footer />
-            </div>
-        );
+        const App = () => {
+            // for Header
+            const bigTitleContent = <h1>Getting Started React</h1>;
+            const subTitleContent = <h2>JavaScript Library</h2>;
+            const learner = {
+                firstName: 'Andrew',
+                lastName: 'Le Nguyen'
+            }
+            const date = {
+                weekDay: 'Thu',
+                monthDay: '28th',
+                month: 'Oct',
+                year: '2021'
+            }
+            const learnerContent = <p>Learner: {learner.firstName} {learner.lastName}</p>
+            const dateContent = <p>Date: {Object.values(date).join(" ")}</p>
+
+            // for main
+            const prequisitesListItems = ['HTML', 'CSS', 'JavaScript'];
+            const itemsWithLiTags = prequisitesListItems.map(item => <li key={item}>{item}</li>);
+            const operand1 = 20;
+            const operand2 = 2;
+
+            // for Footer
+            const footerContent = <p>Copyright &copy; 2021</p>;
+
+            return (
+                <div className="app">
+                    <Header 
+                        bigTitle = {bigTitleContent}
+                        subTitle = {subTitleContent}
+                        learner = {learnerContent}
+                        date = {dateContent}
+                    />
+                    <Main 
+                        techList = {itemsWithLiTags}
+                        op1 = {operand1}
+                        op2 = {operand2}
+                    />
+                    <Footer 
+                        copy = {footerContent}
+                    />
+                </div>
+            )
+        };
         // 3. Using render() form ReactDOM to render the 2 into 1
         ReactDOM.render(<App />, rootElement);
     </script>
