@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap"
+        rel="stylesheet">
     <title>Data and JSX elements</title>
 
     <style>
@@ -12,6 +16,66 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        /* for wrapping elements */
+        body {
+            background-color: #141727;
+            font-family: 'Zen Kaku Gothic Antique', sans-serif;
+        }
+
+        h1, h2, h3 {
+            letter-spacing: 5px;
+        }
+        
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 0.9375rem 0;
+        }
+
+        .wrapper {
+            padding: 0.9375rem 6.25rem;
+        }
+
+        .app {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header,
+        .footer {
+            background-color: rgb(44, 234, 255);
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 4;
+        }
+
+        .main {
+            background-color: #fff;
+            flex: 8.5;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex: 0.5;
+        }
+
+        /* ui components */
+        .header h1 {
+            font-size: 4rem;
+        }
+
+        .header h2 {
+            font-size: 2rem;
         }
     </style>
 </head>
@@ -32,7 +96,7 @@
 
         // creating children
         const header = (
-            <header className="header" style={{ border: "2px solid red" }}>
+            <header className="wrapper header">
                 <h1>Getting Started React</h1>
                 <h2>JavaScript Library</h2>
                 <p>Learner: Andrew Le Nguyen</p>
@@ -41,19 +105,21 @@
         );
 
         const main = (
-            <main className="main" style={{ border: "2px solid cyan" }}>
-                <p>Prequisites to get started with <strong><em>ReactJS</em></strong></p>
+            <main className="wrapper main">
+                <hr/>
+                <h2>1. Prequisites to get started with <strong><em>ReactJS</em></strong></h2>
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>JavaScript</li>
                 </ul>
-                <p>Random basic Math using numbers: 20 + 2 = {20 + 2}</p>
+                <hr/>
+                <h2>2. Random basic Math using numbers: 20 + 2 = {20 + 2}</h2>
             </main>
         );
 
         const footer = (
-            <footer className="footer" style={{ border: "2px solid darkgreen" }}>
+            <footer className="footer">
                 <p>Copyright &copy; 2021</p>
             </footer>
         );
