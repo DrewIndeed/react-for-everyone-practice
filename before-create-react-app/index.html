@@ -97,7 +97,7 @@
         const rootElement = document.getElementById("root");
 
         // creating children
-        const Header = ({bigTitle, subTitle, learner, date}) => (
+        const Header = ({ bigTitle, subTitle, learner, date }) => (
             <header className="wrapper header">
                 {bigTitle}
                 {subTitle}
@@ -106,7 +106,7 @@
             </header>
         );
 
-        const Main = ({techList, op1, op2}) => (
+        const Main = ({ techList, op1, op2 }) => (
             <main className="wrapper main">
                 <hr />
                 <h2>1. Prequisites to get started with <strong><em>ReactJS</em></strong></h2>
@@ -118,7 +118,7 @@
             </main>
         );
 
-        const Footer = ({copy}) => (
+        const Footer = ({ copy }) => (
             <footer className="footer">
                 {copy}
             </footer>
@@ -153,19 +153,19 @@
 
             return (
                 <div className="app">
-                    <Header 
-                        bigTitle = {bigTitleContent}
-                        subTitle = {subTitleContent}
-                        learner = {learnerContent}
-                        date = {dateContent}
+                    <Header
+                        bigTitle={bigTitleContent}
+                        subTitle={subTitleContent}
+                        learner={learnerContent}
+                        date={dateContent}
                     />
-                    <Main 
-                        techList = {itemsWithLiTags}
-                        op1 = {operand1}
-                        op2 = {operand2}
+                    <Main
+                        techList={itemsWithLiTags}
+                        op1={operand1}
+                        op2={operand2}
                     />
-                    <Footer 
-                        copy = {footerContent}
+                    <Footer
+                        copy={footerContent}
                     />
                 </div>
             )
