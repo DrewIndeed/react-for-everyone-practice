@@ -97,30 +97,30 @@
         const rootElement = document.getElementById("root");
 
         // creating children
-        const Header = (props) => (
+        const Header = ({bigTitle, subTitle, learner, date}) => (
             <header className="wrapper header">
-                {props.bigTitle}
-                {props.subTitle}
-                {props.learner}
-                {props.date}
+                {bigTitle}
+                {subTitle}
+                {learner}
+                {date}
             </header>
         );
 
-        const Main = (props) => (
+        const Main = ({techList, op1, op2}) => (
             <main className="wrapper main">
                 <hr />
                 <h2>1. Prequisites to get started with <strong><em>ReactJS</em></strong></h2>
                 <ul>
-                    {props.techList}
+                    {techList}
                 </ul>
                 <hr />
-                <h2>2. Random basic Math using numbers: {props.op1} + {props.op2} = {props.op1 + props.op2}</h2>
+                <h2>2. Random basic Math using numbers: {op1} + {op2} = {op1 + op2}</h2>
             </main>
         );
 
-        const Footer = (props) => (
+        const Footer = ({copy}) => (
             <footer className="footer">
-                {props.copy}
+                {copy}
             </footer>
         );
 
