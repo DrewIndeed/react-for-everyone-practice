@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import MainForthSection from "./MainForthSection";
+import ControlledInput from "./ControlledInput";
 
 const Main = ({ techList, op1, op2 }) => {
   const [num, setNum] = useState(0);
@@ -47,6 +48,11 @@ const Main = ({ techList, op1, op2 }) => {
         dcev={handleDecrement}
         curNum={num}
       />
+      <br />
+      <br />
+      <hr />
+      <h2>5. Controlled Input</h2>
+      <ControlledInput />
     </main>
   );
 };
