@@ -88,3 +88,13 @@ ul {
     background-color: red;
     transform: scale(1.08);
 }
+
+input {
+    padding: 10px 20px;
+}
+
+.horizontalForm {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

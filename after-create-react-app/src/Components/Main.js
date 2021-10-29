@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import MainForthSection from "./MainForthSection";
 import ControlledInput from "./ControlledInput";
+import HorizontalForm from "./HorizontalForm";
 
 const Main = ({ techList, op1, op2 }) => {
   const [num, setNum] = useState(0);
@@ -40,7 +41,6 @@ const Main = ({ techList, op1, op2 }) => {
       <h2>3. Playing with events</h2>
       <Button text={"Say My Name"} ev={sayName} />
       <br />
-      <br />
       <hr />
       <h2>4. Incre and Decre States</h2>
       <MainForthSection
@@ -49,10 +49,14 @@ const Main = ({ techList, op1, op2 }) => {
         curNum={num}
       />
       <br />
-      <br />
       <hr />
       <h2>5. Controlled Input</h2>
+      <br />
       <ControlledInput />
+      <br />
+      <hr />
+      <h2>6. Forms</h2>
+      <HorizontalForm />
     </main>
   );
 };

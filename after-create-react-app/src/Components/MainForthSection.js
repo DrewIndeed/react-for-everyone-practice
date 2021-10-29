@@ -14,7 +14,7 @@ const MainForthSection = ({ icev, dcev, curNum }) => {
       <Button text={"Increase"} ev={icev} />
       <div
         style={{
-          fontSize: "5rem",
+          fontSize: "2rem",
           margin: "0 2rem",
           border: "2px solid black",
           padding: "0 4rem",
