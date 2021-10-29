@@ -3,3 +3,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* for wrapping elements */
+body {
+    background-color: #141727;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: 5px;
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 0.9375rem 0;
+}
+
+.wrapper {
+    padding: 0.9375rem 6.25rem;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    background-color: rgb(44, 234, 255);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 4;
+}
+
+.main {
+    background-color: #fff;
+    flex: 8.5;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex: 0.5;
+}
+
+/* ui components */
+.header h1 {
+    font-size: 4rem;
+}
+
+.header h2 {
+    font-size: 2rem;
+} 
