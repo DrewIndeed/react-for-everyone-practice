@@ -1,4 +1,5 @@
 import React from "react";
+import SayMyNameBtn from './SayMyNameBtn';
 
 const Main = ({ techList, op1, op2 }) => (
   <main className="wrapper main">
@@ -14,6 +15,13 @@ const Main = ({ techList, op1, op2 }) => (
     <h2>
       2. Random basic Math using numbers: {op1} + {op2} = {op1 + op2}
     </h2>
+    <br />
+    <br />
+    <hr />
+    <h2>
+      3. Playing with events
+    </h2>
+    <SayMyNameBtn />
   </main>
 );
 
