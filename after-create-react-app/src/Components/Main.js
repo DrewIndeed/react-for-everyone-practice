@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SayMyNameBtn from "./Button";
+import Button from "./Button";
 
 const Main = ({ techList, op1, op2 }) => {
   const [num, setNum] = useState(0);
@@ -36,7 +36,7 @@ const Main = ({ techList, op1, op2 }) => {
       <br />
       <hr />
       <h2>3. Playing with events</h2>
-      <SayMyNameBtn text={"Say My Name"} ev={sayName} />
+      <Button text={"Say My Name"} ev={sayName} />
       <br />
       <br />
       <hr />
@@ -49,7 +49,7 @@ const Main = ({ techList, op1, op2 }) => {
           gap: "10px",
         }}
       >
-        <SayMyNameBtn text={"Increase"} ev={handleIncrement} />
+        <Button text={"Increase"} ev={handleIncrement} />
         <div
           style={{
             fontSize: "5rem",
@@ -60,7 +60,7 @@ const Main = ({ techList, op1, op2 }) => {
         >
           {num}
         </div>
-        <SayMyNameBtn text={"Decrease"} ev={handleDecrement} />
+        <Button text={"Decrease"} ev={handleDecrement} />
       </div>
     </main>
   );
