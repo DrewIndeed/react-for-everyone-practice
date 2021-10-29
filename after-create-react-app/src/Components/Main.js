@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import MainForthSection from "./MainForthSection";
 
 const Main = ({ techList, op1, op2 }) => {
   const [num, setNum] = useState(0);
@@ -41,27 +42,11 @@ const Main = ({ techList, op1, op2 }) => {
       <br />
       <hr />
       <h2>4. Incre and Decre States</h2>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "10px",
-        }}
-      >
-        <Button text={"Increase"} ev={handleIncrement} />
-        <div
-          style={{
-            fontSize: "5rem",
-            margin: "0 2rem",
-            border: "2px solid black",
-            padding: "0 4rem",
-          }}
-        >
-          {num}
-        </div>
-        <Button text={"Decrease"} ev={handleDecrement} />
-      </div>
+      <MainForthSection
+        icev={handleIncrement}
+        dcev={handleDecrement}
+        curNum={num}
+      />
     </main>
   );
 };

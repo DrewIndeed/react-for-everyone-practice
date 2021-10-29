@@ -1,7 +1,7 @@
 import "./styles/App.css";
 import Header from "./Components/Header";
-// import Main from "./Components/Main";
-import MainClass from "./Components/MainClass";
+import Main from "./Components/Main";
+// import MainClass from "./Components/MainClass";
 import Footer from "./Components/Footer";
 
 const App = () => {
@@ -44,8 +44,8 @@ const App = () => {
         learner={learnerContent}
         date={dateContent}
       />
-      {/* <Main techList={itemsWithLiTags} op1={operand1} op2={operand2} /> */}
-      <MainClass techList={itemsWithLiTags} op1={operand1} op2={operand2} />
+      <Main techList={itemsWithLiTags} op1={operand1} op2={operand2} />
+      {/* <MainClass techList={itemsWithLiTags} op1={operand1} op2={operand2} /> */}
       <Footer copy={footerContent} />
     </div>
   );
