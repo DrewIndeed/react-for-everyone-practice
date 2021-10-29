@@ -1,1 +1,2 @@
 Covered knowledge: JSX, JSX eLements, Rendering JSX elements, Style and className, Injecting data into JSX elements
+Covered knowledge from Commit 5: React Component, Rendering Components, Props
